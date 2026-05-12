@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>my-website</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- STORAGE_KEY for theme must match `src/lib/theme.ts` (`theme`) -->
+    <script>
+      ;(function () {
+        var key = 'theme'
+        var raw = null
+        try {
+          raw = localStorage.getItem(key)
+        } catch (e) {}
+        var theme =
+          raw === 'light' || raw === 'dark'
+            ? raw
+            : null
+        if (raw !== null && theme === null) {
+          try {
+            localStorage.removeItem(key)
+          } catch (e) {}
+        }
+        if (!theme) {
+          theme =
+            window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches
+              ? 'dark'
+              : 'light'
+        }
+        document.documentElement.dataset.theme = theme
+      })()
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
