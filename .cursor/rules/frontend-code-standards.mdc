@@ -1,0 +1,13 @@
+---
+description: React/TS 前端代码标准（Tailwind、暗色、懒加载、命名）
+globs: "**/*.ts,**/*.tsx"
+alwaysApply: false
+---
+
+# 前端代码标准
+
+- 组件使用 **TypeScript** 与**函数式组件**。
+- 样式**仅使用 Tailwind CSS**；禁止内联 `style`。
+- 支持**暗色模式**：使用 Tailwind `dark:` 变体与项目现有 theme 约定一致。
+- **图片**使用懒加载（例如 `loading="lazy"`，或符合项目约定的等价方案）。
+- **组件文件名**使用 PascalCase（如 `HeroSection.tsx`）。

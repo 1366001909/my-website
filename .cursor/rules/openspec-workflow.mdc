@@ -1,0 +1,24 @@
+---
+description: OpenSpec 工作流——先读后做、需求确认、out-of-scope 与分 Phase Apply
+alwaysApply: true
+---
+
+# OpenSpec 工作流
+
+## 核心纪律
+
+1. **先读后做**：执行任何 OpenSpec 相关操作或命令前，先读取：
+   - `openspec/config.yaml`（项目约束）
+   - `openspec/specs/` 下与当前工作相关的规范（系统既有行为）
+   - `openspec/changes/` 下当前活跃变更（若存在）
+
+2. **不要猜测需求**：若 spec 未明确定义某行为，向用户提问澄清，不得自行补全为「默认实现」。
+
+3. **out-of-scope 是红线**：`proposal.md` 中标注为 out-of-scope 的内容，禁止实现或变相实现。
+
+## Apply 阶段
+
+1. 每完成 `tasks.md` 中的一个 Phase 即停止。
+2. 总结本阶段代码变更（涉及文件、原因与要点），便于 review。
+3. 等待用户确认后再进入下一 Phase。
+4. 禁止在一次会话中连续实现全部 Phase / 全部任务。
