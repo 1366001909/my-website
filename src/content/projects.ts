@@ -1,4 +1,5 @@
 import projectPlaceholder from '../assets/projects/project-placeholder.svg'
+import aiTextPolisherCover from '../assets/projects/ai-text-polisher-cover.png'
 
 /** 占位截图：四条记录共用本地 SVG；GitHub 链接为示例仓库，请替换为你的真实地址。 */
 
@@ -7,6 +8,8 @@ export type ProjectItem = {
   name: string
   summary: string
   githubUrl: string
+  /** 点击封面图跳转的在线访问地址（可选） */
+  projectUrl?: string
   imageSrc: string
   imageAlt: string
 }
@@ -29,11 +32,13 @@ const rawProjects: ProjectItem[] = [
   },
   {
     id: 'p2',
-    name: '组件库实验',
-    summary: '封装常用 UI 模式与无障碍实践，探索 design token 与暗色主题一体化。',
-    githubUrl: 'https://github.com/octocat/Spoon-Knife',
-    imageSrc: projectPlaceholder,
-    imageAlt: '组件库实验项目封面占位图',
+    name: '个人写作助手',
+    summary:
+      '基于 React 与 DeepSeek 的 AI 文本润色工具，支持在线写作优化，已部署可访问。',
+    githubUrl: 'https://github.com/1366001909/ai-text-polisher',
+    projectUrl: 'http://43.139.224.190:3000',
+    imageSrc: aiTextPolisherCover,
+    imageAlt: '个人写作助手 AI Text Polisher 界面截图',
   },
   {
     id: 'p3',
