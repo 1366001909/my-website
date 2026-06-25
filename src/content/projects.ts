@@ -1,5 +1,6 @@
 import projectPlaceholder from '../assets/projects/project-placeholder.svg'
 import aiTextPolisherCover from '../assets/projects/ai-text-polisher-cover.png'
+import jianpuCover from '../assets/projects/jianpu-cover.png'
 
 /** 占位截图：四条记录共用本地 SVG；GitHub 链接为示例仓库，请替换为你的真实地址。 */
 
@@ -42,11 +43,13 @@ const rawProjects: ProjectItem[] = [
   },
   {
     id: 'p3',
-    name: 'CLI 小工具',
-    summary: 'Node 脚本集合，用于本地工作流自动化；强调零配置与可测试性。',
-    githubUrl: 'https://github.com/octocat/linguist',
-    imageSrc: projectPlaceholder,
-    imageAlt: 'CLI 小工具项目封面占位图',
+    name: '简谱曲库',
+    summary:
+      '基于 Django 与 MySQL 的简谱图片收藏站，支持分类浏览、搜索与管理后台，已部署可访问。',
+    githubUrl: 'https://github.com/1366001909/jianpu',
+    projectUrl: 'http://43.139.224.190/',
+    imageSrc: jianpuCover,
+    imageAlt: '简谱曲库网站界面截图',
   },
   {
     id: 'p4',
